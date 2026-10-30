@@ -1,23 +1,26 @@
 
+import "./App.css";
+import Header from "./components/Header.jsx"
+import Main from "./components/Maincontent.jsx";
+import Footer from "./components/Footer.jsx";
 
-import './App.css'
-import reactLogo from './assets/react.svg'
 
-function Yaya() {
-  console.log("yaya")
-  return   <h1>yaya</h1>
-  
-  
+
+function Page() {
+  return (
+    <div className="app-container">
+     <Header />
+      <Main />
+      <Footer />
+     
+    </div>
+  );
 }
 function App() {
-
-
   return (
     <>
-    <img src={reactLogo} alt="" />
-    <Yaya />
+      <Page />
     </>
-  )
+  );
 }
-
-export default App
+export default App;
