@@ -5,14 +5,10 @@ function Header() {
     <>
      <header className="header">
         
-        <nav className="nav-bar">
+       
           <img src={reactLogo} alt="React Logo"  className="react-logo" />
-          <ul className="nav-list">
-            <li>Home</li>
-            <li>About</li>
-            <li>Pricing</li>
-          </ul>
-        </nav>
+          <span className='navbar-text'>My travel journal</span>
+        
       </header>
     </>
   )
