@@ -1,16 +1,15 @@
 import "../App.css";
-import milanCathedral from "../assets/travel.png";
-function Main() {
+function Main({data}) {
   return (
     <>
       <main className="main-content">
         <section className="travel-card">
-          <img src={milanCathedral} alt="milan" className="card-image" />
+          <img src={data.img.src} alt={data.img.alt} className="card-image" />
           <div className="milan-card">
             <div className="location-row">
-              <span className="location-country">Italy</span>
+              <span className="location-country">{data.country}</span>
               <a
-                href="#"
+                href={data.googleMapLink}
                 target="_blank"
                 rel="noreferrer"
                 className="maps-link"
@@ -18,13 +17,10 @@ function Main() {
                 View on Google maps
               </a>
             </div>
-            <h2 className="card-title">Milan Cathedral</h2>
-            <p className="card-date">12 Jan, 2021 - 24 Jan, 2021</p>
+            <h2 className="card-title">{data.title}</h2>
+            <p className="card-date">{data.dates}</p>
             <p className="card-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              nemo aliquid incidunt eligendi beatae est quae, quod dignissimos
-              ab eveniet quisquam eum, ad quasi. Ut porro minus dolore sunt
-              atque.
+             {data.text}
             </p>
           </div>
         </section>

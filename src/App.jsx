@@ -7,13 +7,34 @@ import reactLogo from "./assets/react.svg"
 import vite from "./assets/vite.svg"
 import hero from "./assets/hero.png"
 import profile from "./assets/profile.png"
+import jokesData from "./JokesData.js";
+import Joke from "./components/Joke.jsx";
+import travelData from "./data.js"
 
 function Page() {
-  
+  const jokesElements = jokesData.map((joke) => {
+    return (
+    <Joke 
+        key = {joke.id}
+         setup= {joke.setup}
+         punchline= {joke.punchline}
+    /> 
+    
+    )                   
+  })
+  const travelElements = travelData.map((data) => {
+    return (
+    <Main
+      key = {data.id}
+      data = {data}
+    />
+    )
+  })
   return (
     <div className="app-conatiner">
       <Header />
-      <Main />
+      {travelElements}
+      {jokesElements}
       <Contact
         img={{ 
           src: reactLogo,
@@ -52,6 +73,7 @@ function Page() {
         phone="0911504082"
         email="gmail@gmail.com"
       />
+      
 
       <Footer />
     </div>
