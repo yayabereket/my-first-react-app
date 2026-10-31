@@ -4,7 +4,7 @@ function Contact(props) {
     return (
     
     <section className="travel-card">
-         <img src= {props.img} alt="milan" className="card-image" />
+         <img src= {props.img.src} alt={props.img.alt} className="card-image" />
         <div className="milan-card">
                
                 <h2 className="card-title">{props.name}</h2>
